@@ -23,14 +23,6 @@ function renderTasks() {
     }
     taskList.appendChild(listItem);
   });
-
-  const taskFormRow = document.getElementById('task-form-row');
-  if (!document.getElementById('enter-icon')) {
-    const enterIcon = document.createElement('i');
-    enterIcon.id = 'enter-icon';
-    enterIcon.className = 'fas fa-keyboard-return';
-    taskFormRow.appendChild(enterIcon);
-  }
 }
 
 renderTasks();
