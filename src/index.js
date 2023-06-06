@@ -1,11 +1,10 @@
-
 import './style.css';
 
 // Initial tasks array
 const tasks = [
-  { description: 'Task 1', completed: false, index: 1 },
-  { description: 'Task 2', completed: true, index: 2 },
-  { description: 'Task 3', completed: false, index: 3 }
+  { description: 'Feed Kira', completed: false, index: 1 },
+  { description: 'Clean the garden', completed: true, index: 2 },
+  { description: 'make fruit salad', completed: false, index: 3 }
 ];
 
 // Function to render tasks
@@ -15,9 +14,10 @@ function renderTasks() {
 
   tasks.forEach(task => {
     const listItem = document.createElement('li');
+    listItem.classList.add('row');
     listItem.innerHTML = `
-      <span>${task.description}</span>
       <input type="checkbox" ${task.completed ? 'checked' : ''}>
+      <span>${task.description}</span>
       <i class="fas fa-ellipsis-v"></i>
     `;
     if (task.completed) {
@@ -26,20 +26,6 @@ function renderTasks() {
     taskList.appendChild(listItem);
   });
 }
-
-// Event listener for form submission
-document.getElementById('task-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const taskInput = document.getElementById('task-input');
-  const newTask = {
-    description: taskInput.value,
-    completed: false,
-    index: tasks.length + 1
-  };
-  tasks.push(newTask);
-  taskInput.value = '';
-  renderTasks();
-});
 
 // Initial rendering of tasks
 renderTasks();
