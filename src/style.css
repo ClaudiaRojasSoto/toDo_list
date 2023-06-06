@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
   border-bottom: 1px solid lightgrey;
 }
 
@@ -38,7 +37,7 @@ h1 {
 #task-input {
   flex-grow: 1;
   border: none;
-  padding-right: 10px;
+  padding: 10px 10px 10px;
 }
 
 .fas.fa-keyboard-return {
@@ -49,7 +48,6 @@ h1 {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin: 10px;
 }
 
 #task-list li {
@@ -80,6 +78,6 @@ h1 {
   border: none;
   background-color: lightgray;
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
   width: calc(100% - 20px);
 }
