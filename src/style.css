@@ -10,7 +10,7 @@ body {
   background-color: #fff;
   border: 2px solid lightgrey;
   font-family: Arial, sans-serif;
-  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 5px #0000001a;
 }
 
 .row {
@@ -23,25 +23,36 @@ body {
 h1 {
   margin-left: 10px;
   font-size: 16px;
+  color: #808080;
 }
 
 .fas.fa-sync-alt {
   margin-right: 10px;
+  color: #808080;
+  font-size: 10px;
 }
 
 #task-form {
   width: 100%;
   display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  float: right;
+}
+
+.icon-container span {
+  font-size: 10px;
+  color: #808080;
+  margin-right: 10px;
 }
 
 #task-input {
   flex-grow: 1;
   border: none;
   padding: 10px 10px 10px;
-}
-
-.fas.fa-keyboard-return {
-  margin-right: 10px;
+  font-style: italic;
 }
 
 #task-list {
@@ -61,11 +72,14 @@ h1 {
 }
 
 #task-list li span {
+  color: #808080;
   flex-grow: 1;
 }
 
 .fas.fa-ellipsis-v {
   margin-right: 10px;
+  color: #808080;
+  font-size: 10px;
 }
 
 .fas {
@@ -76,8 +90,9 @@ h1 {
   flex-grow: 1;
   margin: 0;
   border: none;
-  background-color: lightgray;
+  background-color: #d3d3d3;
   cursor: pointer;
-  padding: 15px;
-  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  color: #808080;
 }
