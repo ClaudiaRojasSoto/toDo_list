@@ -9,25 +9,24 @@
 
 # 📗 Table of Contents
 
--   [📖 About the Project](#about-project)
-    -   [🛠 Built With](#built-with)
-        -   [Tech Stack](#tech-stack)
-        -   [Key Features](#key-features)
-    -   [🚀 Live Demo](#live-demo)
--   [💻 Getting Started](#getting-started)
-    -   [Setup](#setup)
-    -   [Prerequisites](#prerequisites)
-    -   [Install](#install)
-    -   [Usage](#usage)
-    -   [Run tests](#run-tests)
-    -   [Deployment](#deployment)
--   [👥 Authors](#authors)
--   [🔭 Future Features](#future-features)
--   [🤝 Contributing](#contributing)
--   [⭐️ Show your support](#support)
--   [🙏 Acknowledgements](#acknowledgements)
--   [❓ FAQ (OPTIONAL)](#faq)
--   [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[toDo\_list\] ](#-todo_list-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Project Structure](#project-structure)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 # 📖 [toDo_list] <a name="about-project"></a>
 
@@ -56,7 +55,6 @@
   </ul>
 </details>
 
-
 ### Key Features <a name="key-features"></a>
 
 -   **[Webpack Configuration]**
@@ -79,18 +77,26 @@
 ## 💻 Getting Started <a name="getting-started"></a>
 
 > To get a local copy up and running, follow these steps.
--Clone this repository to your local machine.
--Make sure you have Node.js installed on your system.
--Run the following command in the terminal to install the project dependencies:
+> This project requires Node.js and npm installed on your machine.
+
+-Node.js
+-npm
+
+-Clone this repository to your local machine using:
+
+ git clone https://github.com/ClaudiaRojasSoto/toDo_list.git
+
+-Navigate to the project folder:
+
+ cd toDo_list
+
+-Install the project dependencies:
 
 npm install
 
--This will start the webpack-dev-server and automatically open your application in the default browser. Any changes you make to the JavaScript or CSS files will be automatically reflected in the browser.
+o start the development server, run the following command:
 
--Production: To generate an optimized production build of your application, run the following command:
-
-npm run build
-
+npm start
 
 ### Project Structure
 
@@ -118,8 +124,6 @@ To run the project, execute the following command: just need a web Browser
 ### Run tests
 
 To run tests, run the following command: you just need a simple web browser to run this project for a test
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -167,6 +171,6 @@ Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/toDo_li
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
