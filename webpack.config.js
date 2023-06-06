@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development', // Puede cambiar a 'production' si se desea generar una versión optimizada para producción
+  mode: 'development',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
