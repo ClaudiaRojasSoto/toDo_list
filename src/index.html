@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+</head>
+<body>
+  <div id="todo-list">
+    <div class="row">
+      <h1>Today's To Do</h1>
+      <i class="fas fa-sync-alt"></i>
+    </div>
+    <div id="task-form-row" class="row">
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Add to your list...">
+        <div class="icon-container">
+          <span>&#x23CE;</span>
+        </div>
+      </form>
+      
+    </div>
+    
+    <ul id="task-list">
+      <!-- Tasks (as 'li' elements) will be inserted here -->
+    </ul>
+    <div class="row">
+      <button id="clear-completed">Clear all completed</button>
+    </div>
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>

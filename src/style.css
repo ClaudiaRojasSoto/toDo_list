@@ -1,0 +1,98 @@
+body {
+  background-color: #eee;
+  font-size: 16px;
+}
+
+#todo-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #fff;
+  border: 2px solid lightgrey;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 15px 5px #0000001a;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #808080;
+}
+
+.fas.fa-sync-alt {
+  margin-right: 10px;
+  color: #808080;
+  font-size: 10px;
+}
+
+#task-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  float: right;
+}
+
+.icon-container span {
+  font-size: 10px;
+  color: #808080;
+  margin-right: 10px;
+}
+
+#task-input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px 10px 10px;
+  font-style: italic;
+}
+
+#task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+#task-list li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#task-list li span {
+  color: #808080;
+  flex-grow: 1;
+}
+
+.fas.fa-ellipsis-v {
+  margin-right: 10px;
+  color: #808080;
+  font-size: 10px;
+}
+
+.fas {
+  cursor: pointer;
+}
+
+#clear-completed {
+  flex-grow: 1;
+  margin: 0;
+  border: none;
+  background-color: #d3d3d3;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  color: #808080;
+}
