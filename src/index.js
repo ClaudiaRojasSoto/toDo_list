@@ -1,13 +1,11 @@
 import './style.css';
 
-// Initial tasks array
 const tasks = [
   { description: 'Feed Kira', completed: false, index: 1 },
-  { description: 'Clean the garden', completed: true, index: 2 },
-  { description: 'make fruit salad', completed: false, index: 3 }
+  { description: 'Clean the garden', completed: false, index: 2 },
+  { description: 'Make fruit salad', completed: false, index: 3 }
 ];
 
-// Function to render tasks
 function renderTasks() {
   const taskList = document.getElementById('task-list');
   taskList.innerHTML = '';
@@ -25,7 +23,14 @@ function renderTasks() {
     }
     taskList.appendChild(listItem);
   });
+
+  const taskFormRow = document.getElementById('task-form-row');
+  if (!document.getElementById('enter-icon')) {
+    const enterIcon = document.createElement('i');
+    enterIcon.id = 'enter-icon';
+    enterIcon.className = 'fas fa-keyboard-return';
+    taskFormRow.appendChild(enterIcon);
+  }
 }
 
-// Initial rendering of tasks
 renderTasks();

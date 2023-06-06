@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 </head>
 <body>
   <div id="todo-list">
     <div class="row">
       <h1>Today's To Do</h1>
+      <i class="fas fa-sync-alt"></i>
     </div>
-    <div class="row">
+    <div id="task-form-row" class="row">
       <form id="task-form">
+        <i class="fas fa-keyboard-return"></i>
         <input type="text" id="task-input" placeholder="Add to your list...">
       </form>
     </div>
+    
     <ul id="task-list">
       <!-- Tasks (as 'li' elements) will be inserted here -->
     </ul>
