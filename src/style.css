@@ -96,3 +96,16 @@ h1 {
   font-size: 16px;
   color: #808080;
 }
+
+.editable:focus {
+  outline: none;
+}
+
+#task-input:focus,
+.editable:focus {
+  outline: none;
+}
+
+.row.selected {
+  background-color: #ffc;
+}
