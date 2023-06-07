@@ -1,14 +1,15 @@
 import './style.css';
-import { addTask, deleteTask, editTask, saveTasks } from './taskFunctions.js';
+import {
+  addTask, deleteTask, editTask, saveTasks,
+} from './taskFunctions.js';
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 const setCaretToEnd = (contentEditableElement) => {
-  let range, selection;
-  range = document.createRange();
+  const range = document.createRange();
   range.selectNodeContents(contentEditableElement);
   range.collapse(false);
-  selection = window.getSelection();
+  const selection = window.getSelection();
   selection.removeAllRanges();
   selection.addRange(range);
 };
@@ -27,22 +28,20 @@ const renderTasks = () => {
       <i class="fas fa-trash-alt" style="display:none"></i>
     `;
 
-    const trashIcon = listItem.querySelector('.fa-trash-alt');
-
-    listItem.querySelector('input[type="checkbox"]').addEventListener('click', function () {
+    listItem.querySelector('input[type="checkbox"]').addEventListener('click', function checkboxClick() {
       tasks[index].completed = this.checked;
       saveTasks(tasks);
       renderTasks();
     });
 
-    listItem.querySelector('.editable').addEventListener('click', function (event) {
+    listItem.querySelector('.editable').addEventListener('click', (event) => {
       event.target.contentEditable = true;
       event.target.focus();
       setCaretToEnd(event.target);
       event.stopPropagation();
     });
 
-    listItem.addEventListener('click', function (event) {
+    listItem.addEventListener('click', (event) => {
       const trashIcon = listItem.querySelector('.fa-trash-alt');
       const isSelected = listItem.classList.contains('selected');
 
@@ -59,13 +58,13 @@ const renderTasks = () => {
       }
     });
 
-    listItem.querySelector('.fa-trash-alt').addEventListener('click', function (event) {
+    listItem.querySelector('.fa-trash-alt').addEventListener('click', (event) => {
       event.stopPropagation();
       tasks = deleteTask(tasks, index);
       renderTasks();
     });
 
-    listItem.querySelector('.editable').addEventListener('blur', function () {
+    listItem.querySelector('.editable').addEventListener('blur', function editableBlur() {
       this.contentEditable = false;
       tasks = editTask(tasks, index, this.textContent.trim());
     });
