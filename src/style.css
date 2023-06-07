@@ -40,6 +40,7 @@ h1 {
 
 .icon-container {
   float: right;
+  cursor: pointer;
 }
 
 .icon-container span {
@@ -95,4 +96,23 @@ h1 {
   padding: 10px;
   font-size: 16px;
   color: #808080;
+}
+
+.editable:focus {
+  outline: none;
+}
+
+#task-input:focus,
+.editable:focus {
+  outline: none;
+}
+
+.row.selected {
+  background-color: #ffc;
+}
+
+.fa-trash-alt {
+  margin-right: 10px;
+  color: #808080;
+  font-size: 17px;
 }
