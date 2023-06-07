@@ -40,6 +40,7 @@ h1 {
 
 .icon-container {
   float: right;
+  cursor: pointer;
 }
 
 .icon-container span {
@@ -108,4 +109,10 @@ h1 {
 
 .row.selected {
   background-color: #ffc;
+}
+
+.fa-trash-alt {
+  margin-right: 10px;
+  color: #808080;
+  font-size: 17px;
 }
