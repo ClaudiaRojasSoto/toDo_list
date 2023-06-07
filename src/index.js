@@ -4,7 +4,7 @@ import { addTask, deleteTask, editTask, saveTasks } from './taskFunctions.js';
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function setCaretToEnd(contentEditableElement) {
-  var range, selection;
+  let range, selection;
   range = document.createRange();
   range.selectNodeContents(contentEditableElement);
   range.collapse(false);
