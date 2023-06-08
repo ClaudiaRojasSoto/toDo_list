@@ -6,4 +6,3 @@ const updateTaskStatus = (tasks, index, completed) => {
 };
 
 export default updateTaskStatus;
-
