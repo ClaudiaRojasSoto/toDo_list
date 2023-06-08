@@ -2,6 +2,7 @@ import './style.css';
 import {
   addTask, deleteTask, editTask, saveTasks,
 } from './taskFunctions.js';
+import updateTaskStatus from './statusUpdates.js';
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -28,9 +29,8 @@ const renderTasks = () => {
       <i class="fas fa-trash-alt" style="display:none"></i>
     `;
 
-    listItem.querySelector('input[type="checkbox"]').addEventListener('click', function checkboxClick() {
-      tasks[index].completed = this.checked;
-      saveTasks(tasks);
+    listItem.querySelector('input[type="checkbox"]').addEventListener('change', function checkboxChange() {
+      updateTaskStatus(tasks, index, this.checked);
       renderTasks();
     });
 
@@ -121,3 +121,15 @@ enterIcon.addEventListener('keypress', (event) => {
 
 renderTasks();
 saveTasks(tasks);
+
+const clearButton = document.getElementById('clear-completed');
+
+clearButton.addEventListener('click', () => {
+  tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+  tasks = tasks.filter((task) => !task.completed);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  renderTasks();
+});
