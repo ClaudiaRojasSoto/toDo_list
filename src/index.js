@@ -2,8 +2,7 @@ import './style.css';
 import {
   addTask, deleteTask, editTask, saveTasks,
 } from './taskFunctions.js';
-import { updateTaskStatus } from './statusUpdates.js';
-
+import updateTaskStatus from './statusUpdates.js';
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
@@ -34,7 +33,6 @@ const renderTasks = () => {
       updateTaskStatus(tasks, index, this.checked);
       renderTasks();
     });
-    
 
     listItem.querySelector('.editable').addEventListener('click', (event) => {
       event.target.contentEditable = true;
@@ -127,10 +125,9 @@ saveTasks(tasks);
 const clearButton = document.getElementById('clear-completed');
 
 clearButton.addEventListener('click', () => {
-
   tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-  tasks = tasks.filter(task => !task.completed);
+  tasks = tasks.filter((task) => !task.completed);
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
