@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> You can see a Demo here: [Demo](https://claudiarojassoto.github.io/toDo_list/dist/)
+> You can see a Demo here: [Demo](https://claudiarojassoto.github.io/toDo_list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
